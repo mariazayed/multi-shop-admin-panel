@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="page-header-left">
+					<h3>{{title}}
+						<small>MultiShop Admin panel</small>
+					</h3>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<ol class="breadcrumb pull-right">
+					<li class="breadcrumb-item">
+						<a [routerLink]="'/dashboard/default'">
+							<app-feather-icons [icon]="'home'"></app-feather-icons>
+						</a>
+					</li>
+					<li *ngIf="breadcrumbs?.parentBreadcrumb" class="breadcrumb-item">{{breadcrumbs?.parentBreadcrumb}}
+					</li>
+					<li *ngIf="breadcrumbs?.childBreadcrumb" class="breadcrumb-item active">
+						{{breadcrumbs?.childBreadcrumb}}
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
